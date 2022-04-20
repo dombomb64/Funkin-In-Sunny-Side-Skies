@@ -1,0 +1,31 @@
+{
+	"storyName": "This message should not appear. If it does, it's a bug.",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "gdIconMoaning",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"Defeat",
+			"chaseImpostor",
+			[
+				0,
+				0,
+				0
+			]
+		]
+	],
+	"weekCharacters": [
+		"gf",
+		"gf",
+		"gf"
+	],
+	"weekName": "Freeplay (SSS)"
+}

@@ -1,0 +1,76 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "chaseDialogueFlip",
+			"boxState": "normal",
+			"expression": "sad",
+			"text": "Noooo! Wait!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "chaseDialogueFlip",
+			"boxState": "normal",
+			"expression": "sad",
+			"text": "You guys! There's no reason to fight!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "chaseDialogueFlip",
+			"boxState": "normal",
+			"expression": "sad",
+			"text": "I like being friends with both of you. I don't want to choose."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "chaseDialogueFlip",
+			"boxState": "normal",
+			"expression": "happy",
+			"text": "*gasp* I know! Here's an idea:"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "chaseDialogueFlip",
+			"boxState": "normal",
+			"expression": "happy",
+			"text": "Maybe we could all be best friends! Then we don't have to fight anymore-"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "adamDialogue",
+			"boxState": "normal",
+			"expression": "happy",
+			"text": "Hey, didn't I already win?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "chaseDialogueFlip",
+			"boxState": "normal",
+			"expression": "neutral",
+			"text": "Let's forget that right now. How about you and I have one last song for fun?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "adamDialogue",
+			"boxState": "normal",
+			"expression": "smug",
+			"text": "I'm up for that."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "chaseDialogueFlip",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "Alright! Let's do this!"
+		}
+	]
+}
