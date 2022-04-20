@@ -1,21 +1,21 @@
 # I'm storing this inside the mods folder so I have to make it ignore everything but this mod lol
 
 # Folders
-achievements
-characters
-custom_events
-custom_notetypes
-data
-fonts
-images
-music
-scripts
-shaders
-songs
-sounds
-stages
-videos
-weeks
+achievements/*
+characters/*
+custom_events/*
+custom_notetypes/*
+data/*
+fonts/*
+images/*
+music/*
+scripts/*
+shaders/*
+songs/*
+sounds/*
+stages/*
+videos/*
+weeks/*
 
 # Files
 pack.json
