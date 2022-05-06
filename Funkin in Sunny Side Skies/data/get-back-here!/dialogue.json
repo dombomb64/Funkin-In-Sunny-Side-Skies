@@ -1,0 +1,76 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "adamDialogue",
+			"boxState": "normal",
+			"expression": "smug",
+			"text": "Heh. Looks like I win. Let's go."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "kristenDialogueFlip",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "Grrr... I can't believe it... I've never lost a rap battle before..."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "kristenDialogueFlip",
+			"boxState": "normal",
+			"expression": "angry",
+			"text": "You! How'd you manage to do it?!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "adamDialogue",
+			"boxState": "normal",
+			"expression": "smug",
+			"text": "How? The power of FRIENDSHIP, obviously."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "kristenDialogueFlip",
+			"boxState": "angry",
+			"expression": "yelling",
+			"text": "RAAAA! GET BACK HERE!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "mattDialogueFlip",
+			"boxState": "normal",
+			"expression": "neutral",
+			"text": "Um, Kristen-"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "kristenDialogueFlip",
+			"boxState": "angry",
+			"expression": "yelling",
+			"text": "I WANT A REMATCH!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "mattDialogueFlip",
+			"boxState": "normal",
+			"expression": "blushing",
+			"text": "Kris-"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "kristenDialogueFlip",
+			"boxState": "angry",
+			"expression": "yelling",
+			"text": "NOT NOW, MATT! I HAVE TO SETTLE THIS!"
+		}
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"storyName": "This message should not appear. If it does, it's a bug.",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "mikeOlderJackson",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "sss2",
+	"startUnlocked": false,
+	"weekCharacters": [
+		"pico",
+		"frog",
+		"picoLeft"
+	],
+	"songs": [
+		[
+			"Game Over",
+			"ripLmao",
+			[
+				90,
+				161,
+				73
+			]
+		]
+	],
+	"hideStoryMode": true,
+	"hiddenUntilUnlocked": false,
+	"weekName": "Freeplay (SSS Week 2)"
+}

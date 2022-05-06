@@ -1,0 +1,48 @@
+{
+	"storyName": "\"I want a rematch!\"",
+	"hideFreeplay": false,
+	"weekBackground": "arcadeBlitzNutshell",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"songs": [
+		[
+			"Rematch",
+			"kristenAngry",
+			[
+				90,
+				161,
+				73
+			]
+		],
+		[
+			"Get Back Here!",
+			"kristenFuriousSupportive",
+			[
+				90,
+				161,
+				73
+			]
+		],
+		[
+			"Free Time",
+			"chaseNutshell",
+			[
+				120,
+				96,
+				144
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"kristenAngry",
+		"adamNutshell",
+		"chaseNutshell"
+	],
+	"weekName": "\"I want a rematch!\""
+}

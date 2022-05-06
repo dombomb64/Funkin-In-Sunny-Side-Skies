@@ -3,14 +3,18 @@
 	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "gdIconMoaning",
-	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"startUnlocked": true,
-	"hideStoryMode": true,
+	"weekBefore": "sss1",
+	"startUnlocked": false,
+	"weekCharacters": [
+		"gf",
+		"gf",
+		"gf"
+	],
 	"songs": [
 		[
 			"Defeat",
@@ -22,10 +26,7 @@
 			]
 		]
 	],
-	"weekCharacters": [
-		"gf",
-		"gf",
-		"gf"
-	],
+	"hideStoryMode": true,
+	"hiddenUntilUnlocked": false,
 	"weekName": "Freeplay (SSS)"
 }
