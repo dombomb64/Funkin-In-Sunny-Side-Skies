@@ -1,103 +1,103 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				0,
-				110
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "Adam Idle"
-		},
-		{
+			"loop": false,
 			"offsets": [
 				104,
 				97
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Adam Sing Left"
+			"fps": 24,
+			"name": "Adam Sing Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-3,
 				106
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Adam Sing Right"
+			"fps": 24,
+			"name": "Adam Sing Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				54,
 				78
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Adam Sing Down"
+			"fps": 24,
+			"name": "Adam Sing Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				41,
 				176
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Adam Sing Up"
+			"fps": 24,
+			"name": "Adam Sing Up",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				200,
 				50
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "Adam Miss Down",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "Adam Miss Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				8,
 				106
 			],
-			"anim": "singRIGHTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "Adam Miss Right",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Adam Miss Right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				40,
 				133
 			],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "Adam Miss Up",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "Adam Miss Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				91,
 				91
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "Adam Miss Left",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Adam Miss Left"
+		},
+		{
+			"offsets": [
+				0,
+				110
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Adam Idle"
 		}
 	],
 	"no_antialiasing": false,

@@ -38,11 +38,11 @@ function makeIcons()
 	setProperty('iconP1.alpha', 1);
 	setProperty('iconP2.alpha', 1);
 
-	if getProperty('iconP1.char') == 'adamNutshell' or getProperty('iconP1.char') == 'kristenNutshell' or getProperty('iconP1.char') == 'chaseNutshell' then
+	if getProperty('iconP1.char') == 'adamNutshell' or getProperty('iconP1.char') == 'kristenNutshell' or getProperty('iconP1.char') == 'chaseNutshell' or getProperty('iconP1.char') == 'elliotNutshell' or getProperty('iconP1.char') == 'senpaiNutshell' then
 		makeBfIcon();
 	end
 
-	if getProperty('iconP2.char') == 'adamNutshell' or getProperty('iconP2.char') == 'kristenNutshell' or getProperty('iconP2.char') == 'chaseNutshell' then
+	if getProperty('iconP2.char') == 'adamNutshell' or getProperty('iconP2.char') == 'kristenNutshell' or getProperty('iconP2.char') == 'chaseNutshell' or getProperty('iconP2.char') == 'elliotNutshell' or getProperty('iconP2.char') == 'senpaiNutshell' then
 		makeDadIcon();
 	end
 end

@@ -1,6 +1,6 @@
 {
 	"storyName": "This message should not appear. If it does, it's a bug.",
-	"difficulties": "",
+	"difficulties": "Easy, Normal, Hard, Unfair",
 	"hideFreeplay": false,
 	"weekBackground": "gdIconMoaning",
 	"freeplayColor": [
@@ -28,5 +28,5 @@
 	],
 	"hideStoryMode": true,
 	"hiddenUntilUnlocked": false,
-	"weekName": "Freeplay (SSS)"
+	"weekName": "Defeat"
 }

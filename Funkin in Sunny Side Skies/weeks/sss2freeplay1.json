@@ -1,6 +1,6 @@
 {
-	"storyName": "This message should not appear. If it does, it's a bug.",
-	"difficulties": "",
+	"storyName": "How dare you. Do you have any idea how hard I worked to buy that star? You're dead to me.",
+	"difficulties": "Hard",
 	"hideFreeplay": false,
 	"weekBackground": "mikeOlderJackson",
 	"freeplayColor": [
@@ -28,5 +28,5 @@
 	],
 	"hideStoryMode": true,
 	"hiddenUntilUnlocked": false,
-	"weekName": "Freeplay (SSS Week 2)"
+	"weekName": "Game Over"
 }

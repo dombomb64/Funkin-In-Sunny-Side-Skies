@@ -1,3 +1,26 @@
+function onCreate()
+	makeAnimatedLuaSprite('chaseBg', 'characters/chaseBgNutshell', 600, 0);
+	addLuaSprite('chaseBg', true);
+	setProperty('chaseBg.scale.x', 3);
+	setProperty('chaseBg.scale.y', 3);
+	setProperty('chaseBg.antialiasing', false);
+	setObjectOrder('chaseBg', getObjectOrder('gfGroup') - 1);
+	addAnimationByPrefix('chaseBg', 'idle', 'Idle', 24, false);
+	--debugPrint(getObjectOrder('gfGroup'), getObjectOrder('chaseBg'), getObjectOrder('arcadeBlitzNutshell3'));
+end
+
+function onBeatHit()
+	if curBeat % 2 == 0 then
+		objectPlayAnimation('chaseBg', 'idle', false);
+	end
+end
+
+function onCountdownTick(counter)
+	if counter % 2 == 0 then
+		objectPlayAnimation('chaseBg', 'idle', false);
+	end
+end
+
 local allowCountdown = false
 function onStartCountdown()
 	-- Block the first countdown and start a timer of 0.8 seconds to play the dialogue
@@ -25,7 +48,7 @@ end
 
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'startDialogue' then -- Timer completed, play dialogue
-		startDialogue('dialogue', 'kristen');
+		startDialogue('dialogue', 'frustration');
 	end
 end
 
