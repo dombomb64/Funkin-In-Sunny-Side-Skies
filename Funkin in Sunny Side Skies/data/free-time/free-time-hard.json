@@ -31836,7 +31836,7 @@
 				]
 			]
 		],
-		"gfVersion": "noGf",
+		"gfVersion": "chaseBoombox",
 		"eventObjects": [
 			{
 				"type": "BPM Change",

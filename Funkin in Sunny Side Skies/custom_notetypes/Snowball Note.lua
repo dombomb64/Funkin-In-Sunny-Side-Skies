@@ -8,9 +8,9 @@ function onCreate()
 				setPropertyFromGroup('unspawnNotes', i, 'noAnimation', true);
 			end
 
-			if getPropertyFromGroup('unspawnNotes', i, 'mustPress') then
-				setPropertyFromGroup('unspawnNotes', i, 'ignoreNote', true);
-			end
+			--if getPropertyFromGroup('unspawnNotes', i, 'mustPress') then
+				--setPropertyFromGroup('unspawnNotes', i, 'ignoreNote', true);
+			--end
 		end
 	end
 end
