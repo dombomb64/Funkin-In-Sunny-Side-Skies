@@ -3,7 +3,7 @@ function onBeatHit()
 		setProperty('boyfriend.flipX', true);
 	elseif curBeat == 424 then
 		cameraFlash('game', '000000', 99999999, true);
-		setProperty('boyfriend.flipX', false);
+		--setProperty('boyfriend.flipX', false);
 		addLuaSprite('chaseApartmentBg3', false);
 		removeLuaSprite('chaseApartmentBg2', false);
 		setProperty('boyfriend.x', 420);
