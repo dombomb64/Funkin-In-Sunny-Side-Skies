@@ -3,7 +3,7 @@ function onCreatePost()
 end
 
 function onEvent(name, value1, value2)
-	--if name == 'Change Character' and value2 == 'kristenRun' or value2 == 'adamRun' then
+	--if name == 'Change Character' and value2 == 'kristenRun' or value2 == 'adamRun' or value2 == 'adamStuck' then
 	if name == 'Change Character' then
 		runTimer('makeLegs', 0.01, 1);
 	end
@@ -25,6 +25,13 @@ function onBeatHit()
 	end
 end
 
+function onStepHit()
+	--if curStep % 2 == 0 then
+		objectPlayAnimation('adamStuckLegs', 'idle', false);
+		objectPlayAnimation('adamStuckLegsPlayer', 'idle', false);
+	--end
+end
+
 function onCountdownTick(counter)
 	if counter % 2 == 0 then
 		objectPlayAnimation('kristenLegs', 'danceLeft', true);
@@ -37,6 +44,8 @@ function onCountdownTick(counter)
 		objectPlayAnimation('adamLegs', 'danceRight', true);
 		objectPlayAnimation('adamLegsPlayer', 'danceRight', true );
 	end
+	objectPlayAnimation('adamStuckLegs', 'idle', true);
+	objectPlayAnimation('adamStuckLegsPlayer', 'idle', true);
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
@@ -62,6 +71,8 @@ function makeLegs()
 	removeLuaSprite('kristenLegsPlayer', false);
 	removeLuaSprite('adamLegs', false);
 	removeLuaSprite('adamLegsPlayer', false);
+	removeLuaSprite('adamStuckLegs', false);
+	removeLuaSprite('adamStuckLegsPlayer', false);
 
 	if (dadName == 'kristenRun') then
 		makeAnimatedLuaSprite('kristenLegs', 'characters/kristenLegs', getProperty('dad.x'), getProperty('dad.y'));
@@ -106,7 +117,7 @@ function makeLegs()
 
 		setProperty('kristenLegsPlayer.antialiasing', false);
 
-		setObjectOrder('kristenLegsPlayer', getObjectOrder('dadGroup'));
+		setObjectOrder('kristenLegsPlayer', getObjectOrder('boyfriendGroup'));
 
 		addLuaSprite('kristenLegsPlayer', false);
 
@@ -158,7 +169,7 @@ function makeLegs()
 
 		setProperty('adamLegsPlayer.antialiasing', false);
 
-		setObjectOrder('adamLegsPlayer', getObjectOrder('dadGroup'));
+		setObjectOrder('adamLegsPlayer', getObjectOrder('boyfriendGroup'));
 
 		addLuaSprite('adamLegsPlayer', false);
 
@@ -166,8 +177,66 @@ function makeLegs()
 		--debugPrint(getObjectOrder('adamLegs'), 'test');
 		--debugPrint('a');
 	end
+
+	if (dadName == 'adamStuck') then
+		makeAnimatedLuaSprite('adamStuckLegs', 'characters/adamStuck', getProperty('dad.x'), getProperty('dad.y'));
+
+		--addAnimationByIndices('adamStuckLegs', 'danceRight', 'Run', '1, 2, 3, 4, 5, 6, 7, 8, 9', 24);
+		--addAnimationByIndices('adamStuckLegs', 'danceLeft', 'Run', '13, 14, 15, 16, 17, 18, 19, 20, 21', 24);
+		addAnimationByPrefix('adamStuckLegs', 'idle', 'Legs Idle', 24, false);
+
+		setProperty('adamStuckLegs.scale.x', 3);
+		setProperty('adamStuckLegs.scale.y', 3);
+		updateHitbox('adamStuckLegs');
+
+		setProperty('adamStuckLegs.offset.x', 0);
+		setProperty('adamStuckLegs.offset.y', 0);
+
+		setProperty('adamStuckLegs.flipX', true);
+
+		setProperty('adamStuckLegs.antialiasing', false);
+
+		setObjectOrder('adamStuckLegs', getObjectOrder('dadGroup') + 1);
+
+		addLuaSprite('adamStuckLegs', false);
+
+		--setBlendMode('adamStuckLegs', 'add');
+		--debugPrint(getObjectOrder('adamStuckLegs'), 'test');
+		--debugPrint('a');
+	end
+
+	if (boyfriendName == 'adamStuck') then
+		makeAnimatedLuaSprite('adamStuckLegsPlayer', 'characters/adamStuck', getProperty('boyfriend.x'), getProperty('boyfriend.y'));
+
+		--addAnimationByIndices('adamStuckLegsPlayer', 'danceRight', 'Run', '1, 2, 3, 4, 5, 6, 7, 8, 9', 24);
+		--addAnimationByIndices('adamStuckLegsPlayer', 'danceLeft', 'Run', '13, 14, 15, 16, 17, 18, 19, 20, 21', 24);
+		addAnimationByPrefix('adamStuckLegsPlayer', 'idle', 'Legs Idle', 24, false);
+
+		setProperty('adamStuckLegsPlayer.scale.x', 3);
+		setProperty('adamStuckLegsPlayer.scale.y', 3);
+		updateHitbox('adamStuckLegsPlayer');
+
+		--debugPrint(getProperty('adamStuckLegsPlayer.offset.x'));
+		setProperty('adamStuckLegsPlayer.offset.x', 0);
+		setProperty('adamStuckLegsPlayer.offset.y', 0);
+
+		--setProperty('adamStuckLegsPlayer.flipX', true);
+
+		setProperty('adamStuckLegsPlayer.antialiasing', false);
+
+		setObjectOrder('adamStuckLegsPlayer', getObjectOrder('boyfriendGroup') + 1);
+
+		addLuaSprite('adamStuckLegsPlayer', false);
+
+		--setBlendMode('adamStuckLegsPlayer', 'add');
+		--debugPrint(getObjectOrder('adamStuckLegs'), 'test');
+		--debugPrint('a');
+	end
+
 	objectPlayAnimation('kristenLegs', 'danceLeft');
 	objectPlayAnimation('kristenLegsPlayer', 'danceLeft');
 	objectPlayAnimation('adamLegs', 'danceLeft');
 	objectPlayAnimation('adamLegsPlayer', 'danceLeft');
+	objectPlayAnimation('adamStuckLegs', 'idle');
+	objectPlayAnimation('adamStuckLegsPlayer', 'idle');
 end

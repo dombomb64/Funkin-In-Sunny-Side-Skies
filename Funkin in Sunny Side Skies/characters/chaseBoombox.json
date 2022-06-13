@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "danceLeft",
-			"indices": [],
-			"name": "Dance Left"
+			"fps": 24,
+			"name": "Dance Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "danceRight",
-			"indices": [],
-			"name": "Dance Right"
+			"fps": 24,
+			"name": "Dance Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "cheer",
-			"indices": [],
-			"name": "Cheer"
+			"fps": 24,
+			"name": "Cheer",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "sad",
-			"indices": [],
-			"name": "Cry"
+			"fps": 24,
+			"name": "Cry",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "scared",
-			"indices": [],
-			"name": "Scared"
-		},
-		{
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
+			"anim": "scared",
 			"fps": 24,
-			"anim": "scared-loop",
+			"name": "Scared",
+			"indices": []
+		},
+		{
 			"loop": true,
-			"name": "Scared Loop"
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "scared-loop",
+			"fps": 24,
+			"name": "Scared Loop",
+			"indices": []
 		}
 	],
 	"no_antialiasing": true,
@@ -81,8 +81,8 @@
 		137
 	],
 	"camera_position": [
-		-640,
-		-470
+		-520,
+		-80
 	],
 	"sing_duration": 4,
 	"scale": 3

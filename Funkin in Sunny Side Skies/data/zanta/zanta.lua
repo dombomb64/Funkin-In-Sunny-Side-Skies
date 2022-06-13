@@ -1,3 +1,7 @@
+function onCreate()
+	addCharacterToList('chaseZanta');
+end
+
 function onBeatHit()
 	if curBeat == 404 then
 		setProperty('boyfriend.flipX', true);

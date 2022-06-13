@@ -4,7 +4,12 @@ end
 
 function onEvent(name, value1, value2)
 	if name == 'Change Default Zoom' then
-		if value1 ~= 0 then
+		--debugPrint('n', value1, 'n');
+		if value2 ~= '' then
+			originalZoom = value2;
+		end
+
+		if value1 ~= '' then
 			--debugPrint(value1);
 			setProperty('defaultCamZoom', tonumber(value1));
 			--setProperty('camGame.zoom', toNumber(value1));

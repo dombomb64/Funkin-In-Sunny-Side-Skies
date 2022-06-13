@@ -1,7 +1,7 @@
 {
 	"dialogue": [
 		{
-			"sound": "",
+			"sound": "chase",
 			"speed": 0.05,
 			"portrait": "chaseDialogueFlip",
 			"boxState": "normal",
@@ -9,7 +9,7 @@
 			"text": "Noooo! Wait!"
 		},
 		{
-			"sound": "",
+			"sound": "chase",
 			"speed": 0.05,
 			"portrait": "chaseDialogueFlip",
 			"boxState": "normal",
@@ -17,7 +17,7 @@
 			"text": "You guys! There's no reason to fight!"
 		},
 		{
-			"sound": "",
+			"sound": "chase",
 			"speed": 0.05,
 			"portrait": "chaseDialogueFlip",
 			"boxState": "normal",
@@ -25,7 +25,7 @@
 			"text": "I like being friends with both of you. I don't want to choose."
 		},
 		{
-			"sound": "",
+			"sound": "chase",
 			"speed": 0.05,
 			"portrait": "chaseDialogueFlip",
 			"boxState": "normal",
@@ -33,7 +33,7 @@
 			"text": "*gasp* I know! Here's an idea:"
 		},
 		{
-			"sound": "",
+			"sound": "chase",
 			"speed": 0.05,
 			"portrait": "chaseDialogueFlip",
 			"boxState": "normal",
@@ -41,7 +41,7 @@
 			"text": "Maybe we could all be best friends! Then we don't have to fight anymore-"
 		},
 		{
-			"sound": "",
+			"sound": "adam",
 			"speed": 0.05,
 			"portrait": "adamDialogue",
 			"boxState": "normal",
@@ -49,7 +49,7 @@
 			"text": "Hey, didn't I already win?"
 		},
 		{
-			"sound": "",
+			"sound": "chase",
 			"speed": 0.05,
 			"portrait": "chaseDialogueFlip",
 			"boxState": "normal",
@@ -57,7 +57,7 @@
 			"text": "Let's forget that right now. How about you and I have one last song for fun?"
 		},
 		{
-			"sound": "",
+			"sound": "adam",
 			"speed": 0.05,
 			"portrait": "adamDialogue",
 			"boxState": "normal",
@@ -65,7 +65,7 @@
 			"text": "I'm up for that."
 		},
 		{
-			"sound": "",
+			"sound": "chase",
 			"speed": 0.05,
 			"portrait": "chaseDialogueFlip",
 			"boxState": "normal",

@@ -1,7 +1,7 @@
 # Funkin-In-Sunny-Side-Skies
-A Friday Night Funkin' mod about the comic Sunny Side Skies. This mod was formerly known as FNF: VS Kristen. It will have more weeks in the future.
+A Friday Night Funkin' mod about the comic Sunny Side Skies. This mod was formerly known as FNF: VS Kristen.
 
-Despite being hosted on GitHub, this mod does not have an exe file. You'll need to drag and drop the mod into your Psych Engine 0.5.2h mods folder.
+Despite being hosted on GitHub, this mod does not have an exe file. You'll need to drag and drop the mod into your Psych Engine 0.5.2h mods folder. Also, you can replace introText.txt in assets/data with the one in mods/data if you feel like it.
 
 'Nuff said. Time for screenshots.
 ## Screenshots

@@ -1,3 +1,8 @@
+-- NOTE:
+-- Feel free to use this script in your mods!
+-- Just make sure to give credit to me, dombomb64.
+-- (You can delete all the commented-out code, most of it is remnants from past attempts.)
+
 function onCreatePost()
 	--debugPrint('winningIcons/icon-' .. getProperty('iconP1.char'));
 	makeIcons();

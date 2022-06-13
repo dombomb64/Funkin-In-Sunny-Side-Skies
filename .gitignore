@@ -5,7 +5,7 @@ achievements/*
 characters/*
 custom_events/*
 custom_notetypes/*
-data/*
+#data/*
 fonts/*
 images/*
 music/*
