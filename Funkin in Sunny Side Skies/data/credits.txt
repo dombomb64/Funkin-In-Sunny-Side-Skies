@@ -11,3 +11,5 @@ Defeat::rareblin::Composed by Rareblin::https://www.youtube.com/channel/UCnTN-0q
 Megalovania::tobyfox::(Composed by Toby Fox) Was referenced in the song "Blitz"::https://undertale.com::0xFF4782C9
 Game Over::mx::Composed by Saster and Kiwiquest::https://youtu.be/1d2vojMHvC0::0xFF4F1B11
 Zanta::zanta::Composed by bbpanzu::https://youtube.com/c/bbpanzuRulesSoSubscribeplz123::0xFFFF3636
+Monochrome::gold::Composed by Adam McHummus::https://youtube.com/channel/UCj1F2IQFcqZqfuyljtxgpXQ::0xFF222222
+Toyboy::nagatoro::Composed by bbpanzu::https://youtube.com/c/bbpanzuRulesSoSubscribeplz123::0xFF8775A2
