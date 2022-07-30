@@ -1,9 +1,11 @@
 The Mod
 dombomb64::dombomb64::basically all of it::https://www.youtube.com/c/dombomb64::0xFF18BBFE
-The Comic
-soaporsalad::soaporsalad::CREATOR of Sunny Side Skies::https://www.webtoons.com/en/creator/soaporsalad::0xFFFFFFFF
+The Comics
+soaporsalad::soaporsalad::CREATOR of Sunny Side Skies, UNFAMILIAR, and Toaster Dude::https://www.webtoons.com/en/creator/soaporsalad::0xFFFFFFFF
+Little Bobler::soaporsalad::Artist of Toaster Dude's Reboot::https://www.webtoons.com/en/creator/littlebobler::0xFFB96E6E
 Assets
 (YT Video Deleted)::questionMark::Senpai and BF DWPs::https://youtu.be/0q2uTC0UDmQ::0xFFFFFFFF
+JummBox::jummbox::The tool I used to create most of the voices in this mod::https://jummbus.bitbucket.io::0xFFBA83E9
 Inspiration
 Danger::black::(Composed by Rareblin) Inspired the scenario for the song "Get Back Here!"::https://youtu.be/8MWfgMKZ-zs::0xFF222222
 Cameos
@@ -13,3 +15,4 @@ Game Over::mx::Composed by Saster and Kiwiquest::https://youtu.be/1d2vojMHvC0::0
 Zanta::zanta::Composed by bbpanzu::https://youtube.com/c/bbpanzuRulesSoSubscribeplz123::0xFFFF3636
 Monochrome::gold::Composed by Adam McHummus::https://youtube.com/channel/UCj1F2IQFcqZqfuyljtxgpXQ::0xFF222222
 Toyboy::nagatoro::Composed by bbpanzu::https://youtube.com/c/bbpanzuRulesSoSubscribeplz123::0xFF8775A2
+Defeat, But I Remade It... sorta.::black::Composed by JomJom412::https://youtube.com/c/JomJom2nd::0xFF222222

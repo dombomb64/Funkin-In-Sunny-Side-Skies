@@ -3,8 +3,9 @@
 function onCreate()
 	for i = 0, getProperty('unspawnNotes.length') - 1 do
 		if getPropertyFromGroup('unspawnNotes', i, 'noteType') == 'Mine' then
-			--if (getPropertyFromGroup('opponentStrums', i, 'texture') == 'noteAssetsNutshell') then
+			--if (getPropertyFromGroup('unspawnNotes', 0, 'noteSplashTexture') == 'noteSplashesNutshell') then
 				setPropertyFromGroup('unspawnNotes', i, 'texture', 'hurtNoteAssetsNutshell');
+				setPropertyFromGroup('unspawnNotes', i, 'noteSplashTexture', 'hurtNoteSplashesNutshell');
 			--else
 				--setPropertyFromGroup('unspawnNotes', i, 'texture', 'HURTNOTE_assets');
 			--end

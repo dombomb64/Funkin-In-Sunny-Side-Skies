@@ -4,8 +4,9 @@ function onCreate()
 	for i = 0, getProperty('unspawnNotes.length') - 1 do
 		if getPropertyFromGroup('unspawnNotes', i, 'noteType') == 'Crucial Note' then
 			setPropertyFromGroup('unspawnNotes', i, 'texture', 'crucialNoteAssetsNutshell');
+			setPropertyFromGroup('unspawnNotes', i, 'noteSplashTexture', 'crucialNoteSplashesNutshell');
 
-			setPropertyFromGroup('unspawnNotes', i, 'hitHealth', '0.092');
+			setPropertyFromGroup('unspawnNotes', i, 'hitHealth', '0.184');
 			setPropertyFromGroup('unspawnNotes', i, 'missHealth', '0.19');
 
 			if getPropertyFromGroup('unspawnNotes', i, 'mustPress') then

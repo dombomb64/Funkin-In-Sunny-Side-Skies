@@ -13,11 +13,11 @@ function onBeatHit()
 		setProperty('boyfriend.x', 420);
 		setProperty('dad.x', -1200);
 	elseif curBeat == 432 then
-		cameraFlash('game', 'ffffff', crochet / 256, true);
+		cameraFlash('game', 'ffffff', crochet / 1000, true);
 		--setProperty('defaultCamZoom', getProperty('defaultCamZoom') / 2);
 		--setProperty('camGame.zoom', getProperty('camGame.zoom') / 2);
 	elseif curBeat == 492 then
-		doTweenZoom('zoomIn', 'camGame', 1.5, crochet / 256, 'sineIn');
+		doTweenZoom('zoomIn', 'camGame', 1.5, crochet / 1000 * 4, 'sineIn');
 	elseif curBeat == 496 then
 		cameraFlash('game', '000000', 99999999, true);
 		setProperty('boyfriend.x', defaultBoyfriendX);
@@ -31,14 +31,20 @@ function onBeatHit()
 		addLuaSprite('chaseApartmentBg4', false);
 		removeLuaSprite('chaseApartmentBg3', false);
 	elseif curBeat == 604 then
-		doTweenZoom('zoomIn', 'camGame', 1.25, crochet / 32, 'sineInOut');
+		doTweenZoom('zoomIn', 'camGame', 1.25, crochet / 1000 * 32, 'sineInOut');
 	end
 end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)
 	if curBeat >= 432 and curBeat <= 496 then
-		local chaseCamX = 1110; --getProperty('boyfriend.x') + 440;
-		local chaseCamY = 210; --getProperty('boyfriend.y') - 540;
+		--local chaseCamX = 1110; --getProperty('boyfriend.x') + 440;
+		--local chaseCamY = 210; --getProperty('boyfriend.y') - 540;
+		
+		local chaseCamX = (getProperty('boyfriend.x') + getProperty('boyfriend.width') / 2) - 100;
+		local chaseCamY = (getProperty('boyfriend.y') + getProperty('boyfriend.height') / 2) - 100;
+		chaseCamX = chaseCamX - getProperty('boyfriend.cameraPosition[0]') - getProperty('opponentCameraOffset[0]');
+		chaseCamY = chaseCamY + getProperty('boyfriend.cameraPosition[1]') + getProperty('opponentCameraOffset[1]');
+
 		local cameraMove = 120;
 		local leftPos = chaseCamX - cameraMove;
 		local downPos = chaseCamY + cameraMove;

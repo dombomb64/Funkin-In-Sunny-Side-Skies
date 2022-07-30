@@ -1,7 +1,7 @@
 function onCreate()
 	-- background stuffs
 	makeLuaSprite('whiteVoid', 'whiteVoid', -1050, -1600);
-	--setScrollFactor('whiteVoid', 0.65, 0.65);
+	setScrollFactor('whiteVoid', 0, 0);
 	scaleObject('whiteVoid', 3, 3);
 	setProperty('whiteVoid.antialiasing', false);
 

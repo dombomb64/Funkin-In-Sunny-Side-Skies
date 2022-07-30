@@ -201,7 +201,7 @@
 			"portrait": "chanceDialogue"
 		},
 		{
-			"expression": "talk",
+			"expression": "neutral",
 			"text": "Alright... Are you ready?",
 			"boxState": "normal",
 			"sound": "adam",

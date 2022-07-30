@@ -17,21 +17,21 @@ function onBeatHit()
 	--elseif curBeat == 191 then
 		--loadRunBg();
 	elseif curBeat == 192 then
-		cameraFlash('game', 'ffffff', crochet / 256, true);
+		cameraFlash('game', 'ffffff', crochet / 1000, true);
 		--removeLuaSprite('blackScreen', true);
 		loadRunBg();
 	elseif curBeat == 383 then
 		cameraFlash('game', '000000', 99999999, true);
 	elseif curBeat == 384 then
-		cameraFlash('game', 'ffffff', crochet / 256, true);
+		cameraFlash('game', 'ffffff', crochet / 1000, true);
 		loadStillBg();
 	elseif curBeat == 508 then
 		cameraFlash('game', '000000', 99999999, true);
 	elseif curBeat == 512 then
-		cameraFlash('game', 'ffffff', crochet / 256, true);
+		cameraFlash('game', 'ffffff', crochet / 1000, true);
 		loadRunBg();
 	elseif curBeat == 580 then
-		cameraFade('game', '000000', crochet / 256, true);
+		cameraFade('game', '000000', crochet / 1000, true);
 		loadRunBg();
 	end
 end

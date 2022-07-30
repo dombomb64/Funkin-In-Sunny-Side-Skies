@@ -2,6 +2,10 @@ function onCreatePost()
 	makeLegs();
 end
 
+function onStartCountdown()
+	runTimer('legsDance', crochet / 1000, 5);
+end
+
 function onEvent(name, value1, value2)
 	--if name == 'Change Character' and value2 == 'kristenRun' or value2 == 'adamRun' or value2 == 'adamStuck' then
 	if name == 'Change Character' then
@@ -12,67 +16,170 @@ function onEvent(name, value1, value2)
 end
 
 function onBeatHit()
-	if curBeat % 2 == 0 then
-		objectPlayAnimation('kristenLegs', 'danceLeft', true);
-		objectPlayAnimation('kristenLegsPlayer', 'danceLeft', true);
-		objectPlayAnimation('adamLegs', 'danceLeft', true);
-		objectPlayAnimation('adamLegsPlayer', 'danceLeft', true);
-	elseif (curBeat + 1) % 2 == 0 then
-		objectPlayAnimation('kristenLegs', 'danceRight', true);
-		objectPlayAnimation('kristenLegsPlayer', 'danceRight', true);
-		objectPlayAnimation('adamLegs', 'danceRight', true);
-		objectPlayAnimation('adamLegsPlayer', 'danceRight', true);
-	end
+	legsDance(curBeat);
 end
 
-function onStepHit()
+--[[function onStepHit()
 	--if curStep % 2 == 0 then
 		objectPlayAnimation('adamStuckLegs', 'idle', false);
 		objectPlayAnimation('adamStuckLegsPlayer', 'idle', false);
 	--end
-end
+end]]--
 
-function onCountdownTick(counter)
+--[[function onCountdownTick(counter)
+	--loadGraphic('countdownReady', 'nutshellUi/ready');
+	--loadGraphic('countdownSet', 'nutshellUi/set');
+	--loadGraphic('countdownGo', 'nutshellUi/shit');
+	--setProperty('introAlts[0]', 'nutshellUi/ready');
+	--setProperty('introAlts[1]', 'nutshellUi/set');
+	--setProperty('introAlts[2]', 'nutshellUi/go');
+	--objectPlayAnimation('boyfriend2', 'idle', true);
+	--objectPlayAnimation('dad2', 'idle', true);
 	if counter % 2 == 0 then
 		objectPlayAnimation('kristenLegs', 'danceLeft', true);
 		objectPlayAnimation('kristenLegsPlayer', 'danceLeft', true);
 		objectPlayAnimation('adamLegs', 'danceLeft', true);
 		objectPlayAnimation('adamLegsPlayer', 'danceLeft', true);
+		objectPlayAnimation('chaseImpostorLegs', 'danceLeft', true);
+		objectPlayAnimation('chaseImpostorLegsPlayer', 'danceLeft', true);
+		objectPlayAnimation('adamCrewmateLegs', 'danceLeft', true);
+		objectPlayAnimation('adamCrewmateLegsPlayer', 'danceLeft', true);
 	elseif (counter + 1) % 2 == 0 then
 		objectPlayAnimation('kristenLegs', 'danceRight', true);
 		objectPlayAnimation('kristenLegsPlayer', 'danceRight', true);
 		objectPlayAnimation('adamLegs', 'danceRight', true);
-		objectPlayAnimation('adamLegsPlayer', 'danceRight', true );
+		objectPlayAnimation('adamLegsPlayer', 'danceRight', true);
+		objectPlayAnimation('chaseImpostorLegs', 'danceRight', true);
+		objectPlayAnimation('chaseImpostorLegsPlayer', 'danceRight', true);
+		objectPlayAnimation('adamCrewmateLegs', 'danceRight', true);
+		objectPlayAnimation('adamCrewmateLegsPlayer', 'danceRight', true);
 	end
 	objectPlayAnimation('adamStuckLegs', 'idle', true);
 	objectPlayAnimation('adamStuckLegsPlayer', 'idle', true);
-end
+end]]--
 
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'makeLegs' then
 		makeLegs();
+	elseif tag == 'legsDance' then
+		legsDance(loopsLeft + 1);
 	end
 end
 
 function onUpdate(elapsed)
 	setProperty('kristenLegs.x', getProperty('dad.x'));
 	setProperty('kristenLegs.y', getProperty('dad.y'));
-	setProperty('kristenLegsPlayer.x', getProperty('dad.x'));
-	setProperty('kristenLegsPlayer.y', getProperty('dad.y'));
-	setProperty('adamLegs.x', getProperty('boyfriend.x'));
-	setProperty('adamLegs.y', getProperty('boyfriend.y'));
+	setProperty('kristenLegsPlayer.x', getProperty('boyfriend.x'));
+	setProperty('kristenLegsPlayer.y', getProperty('boyfriend.y'));
+	setProperty('adamLegs.x', getProperty('dad.x'));
+	setProperty('adamLegs.y', getProperty('dad.y'));
 	setProperty('adamLegsPlayer.x', getProperty('boyfriend.x'));
 	setProperty('adamLegsPlayer.y', getProperty('boyfriend.y'));
+	setProperty('adamStuckLegs.x', getProperty('dad.x'));
+	setProperty('adamStuckLegs.y', getProperty('dad.y'));
+	setProperty('adamStuckLegsPlayer.x', getProperty('boyfriend.x'));
+	setProperty('adamStuckLegsPlayer.y', getProperty('boyfriend.y'));
+	setProperty('adamCrewmateLegs.x', getProperty('dad.x'));
+	setProperty('adamCrewmateLegs.y', getProperty('dad.y'));
+	setProperty('adamCrewmateLegsPlayer.x', getProperty('boyfriend.x'));
+	setProperty('adamCrewmateLegsPlayer.y', getProperty('boyfriend.y'));
+	setProperty('chaseImpostorLegs.x', getProperty('dad.x'));
+	setProperty('chaseImpostorLegs.y', getProperty('dad.y'));
+	setProperty('chaseImpostorShush.x', getProperty('dad.x'));
+	setProperty('chaseImpostorShush.y', getProperty('dad.y'));
+	setProperty('chaseImpostorShush.offset.y', getProperty('dad.offset.y'));
+	setProperty('chaseImpostorLegsPlayer.x', getProperty('boyfriend.x'));
+	setProperty('chaseImpostorLegsPlayer.y', getProperty('boyfriend.y'));
+	setProperty('chaseImpostorShushPlayer.x', getProperty('boyfriend.x'));
+	setProperty('chaseImpostorShushPlayer.y', getProperty('boyfriend.y'));
+	setProperty('chaseImpostorShushPlayer.offset.y', getProperty('boyfriend.offset.y'));
+
+	if (dadName == 'chaseImpostorRun' or dadName == 'chaseImpostorRunSimilarities') and getProperty('dad.animation.curAnim.name') == 'singRIGHT' and getProperty('dad.animation.curAnim.curFrame') == 0 then
+		objectPlayAnimation('chaseImpostorShush', 'singRIGHT');
+	--elseif dadName == 'chaseImpostorRun' and getProperty('dad.animation.curAnim.name') ~= 'singRIGHT' then
+	elseif getProperty('dad.animation.curAnim.curFrame') ~= 0 then
+		objectPlayAnimation('chaseImpostorShush', 'idle');
+	end
+
+	if (boyfriendName == 'chaseImpostorRun' or boyfriendName == 'chaseImpostorRunSimilarities') and getProperty('boyfriend.animation.curAnim.name') == 'singRIGHT' and getProperty('boyfriend.animation.curAnim.curFrame') == 0 then
+		objectPlayAnimation('chaseImpostorShushPlayer', 'singRIGHT');
+	--elseif boyfriendName == 'chaseImpostorRun' and getProperty('boyfriend.animation.curAnim.name') ~= 'singRIGHT' then
+	elseif getProperty('boyfriend.animation.curAnim.curFrame') ~= 0 then
+		objectPlayAnimation('chaseImpostorShushPlayer', 'idle');
+	end
+
+	local amongUsLegFrameDad = -1;
+	if getProperty('chaseImpostorLegs.animation.curAnim.curFrame') ~= 'chaseImpostorLegs.animation.curAnim.curFrame' then amongUsLegFrameDad = getProperty('chaseImpostorLegs.animation.curAnim.curFrame');
+	--elseif getProperty('chaseImpostorLegsPlayer.animation.curAnim.curFrame') ~= 'chaseImpostorLegsPlayer.animation.curAnim.curFrame' then amongUsLegFrameDad = getProperty('chaseImpostorLegsPlayer.animation.curAnim.curFrame');
+	elseif getProperty('adamCrewmateLegs.animation.curAnim.curFrame') ~= 'adamCrewmateLegs.animation.curAnim.curFrame' then amongUsLegFrameDad = getProperty('adamCrewmateLegs.animation.curAnim.curFrame');
+	--elseif getProperty('adamCrewmateLegsPlayer.animation.curAnim.curFrame') ~= 'adamCrewmateLegsPlayer.animation.curAnim.curFrame' then amongUsLegFrameDad = getProperty('adamCrewmateLegsPlayer.animation.curAnim.curFrame');
+	end
+
+	local amongUsLegFrameBf = -1;
+	--if getProperty('chaseImpostorLegs.animation.curAnim.curFrame') ~= 'chaseImpostorLegs.animation.curAnim.curFrame' then amongUsLegFrameBf = getProperty('chaseImpostorLegs.animation.curAnim.curFrame');
+	if getProperty('chaseImpostorLegsPlayer.animation.curAnim.curFrame') ~= 'chaseImpostorLegsPlayer.animation.curAnim.curFrame' then amongUsLegFrameBf = getProperty('chaseImpostorLegsPlayer.animation.curAnim.curFrame');
+	--elseif getProperty('adamCrewmateLegs.animation.curAnim.curFrame') ~= 'adamCrewmateLegs.animation.curAnim.curFrame' then amongUsLegFrameBf = getProperty('adamCrewmateLegs.animation.curAnim.curFrame');
+	elseif getProperty('adamCrewmateLegsPlayer.animation.curAnim.curFrame') ~= 'adamCrewmateLegsPlayer.animation.curAnim.curFrame' then amongUsLegFrameBf = getProperty('adamCrewmateLegsPlayer.animation.curAnim.curFrame');
+	end
+
+	--debugPrint(amongUsLegFrameDad);
+	--debugPrint(getProperty('chaseImpostorLegs.animation.curAnim.curFrame'));
+
+	if amongUsLegFrameDad == 0 then setProperty('chaseImpostorLegs.offset.y', 0); setProperty('dad.offset.y', 0); setProperty('adamCrewmateLegs.offset.y', 0); setProperty('dad.offset.y', -9);
+	elseif amongUsLegFrameDad == 1 then setProperty('chaseImpostorLegs.offset.y', 0); setProperty('dad.offset.y', -9); setProperty('adamCrewmateLegs.offset.y', 0); setProperty('dad.offset.y', -18);
+	elseif amongUsLegFrameDad == 2 then setProperty('chaseImpostorLegs.offset.y', 30); setProperty('dad.offset.y', 30); setProperty('adamCrewmateLegs.offset.y', 30); setProperty('dad.offset.y', 21);
+	elseif amongUsLegFrameDad == 3 then setProperty('chaseImpostorLegs.offset.y', 39); setProperty('dad.offset.y', 39); setProperty('adamCrewmateLegs.offset.y', 39); setProperty('dad.offset.y', 27);
+	elseif amongUsLegFrameDad == 4 or amongUsLegFrameDad == 5 then setProperty('chaseImpostorLegs.offset.y', 42); setProperty('dad.offset.y', 42); setProperty('adamCrewmateLegs.offset.y', 51); setProperty('dad.offset.y', 30);
+	elseif amongUsLegFrameDad >= 6 then setProperty('chaseImpostorLegs.offset.y', 39); setProperty('dad.offset.y', 39); setProperty('adamCrewmateLegs.offset.y', 39); setProperty('dad.offset.y', 27);
+	end
+
+	if amongUsLegFrameBf == 0 then setProperty('adamCrewmateLegsPlayer.offset.y', 0); setProperty('boyfriend.offset.y', -9); setProperty('chaseImpostorLegsPlayer.offset.y', 0); setProperty('boyfriend.offset.y', 0);
+	elseif amongUsLegFrameBf == 1 then setProperty('adamCrewmateLegsPlayer.offset.y', 0); setProperty('boyfriend.offset.y', -18); setProperty('chaseImpostorLegsPlayer.offset.y', 0); setProperty('boyfriend.offset.y', -9);
+	elseif amongUsLegFrameBf == 2 then setProperty('adamCrewmateLegsPlayer.offset.y', 30); setProperty('boyfriend.offset.y', 21); setProperty('chaseImpostorLegsPlayer.offset.y', 30); setProperty('boyfriend.offset.y', 30);
+	elseif amongUsLegFrameBf == 3 then setProperty('adamCrewmateLegsPlayer.offset.y', 39); setProperty('boyfriend.offset.y', 27); setProperty('chaseImpostorLegsPlayer.offset.y', 39); setProperty('boyfriend.offset.y', 39);
+	elseif amongUsLegFrameBf == 4 or amongUsLegFrameBf == 5 then setProperty('adamCrewmateLegsPlayer.offset.y', 51); setProperty('boyfriend.offset.y', 30); setProperty('chaseImpostorLegsPlayer.offset.y', 42); setProperty('boyfriend.offset.y', 51);
+	elseif amongUsLegFrameBf >= 6 then setProperty('adamCrewmateLegsPlayer.offset.y', 39); setProperty('boyfriend.offset.y', 27); setProperty('chaseImpostorLegsPlayer.offset.y', 39); setProperty('boyfriend.offset.y', 39);
+	end
+end
+
+function legsDance(beat)
+	--debugPrint('test');
+	if beat % 2 == 0 then
+		objectPlayAnimation('kristenLegs', 'danceLeft', true);
+		objectPlayAnimation('kristenLegsPlayer', 'danceLeft', true);
+		objectPlayAnimation('adamLegs', 'danceLeft', true);
+		objectPlayAnimation('adamLegsPlayer', 'danceLeft', true);
+		objectPlayAnimation('chaseImpostorLegs', 'danceLeft', true);
+		objectPlayAnimation('chaseImpostorLegsPlayer', 'danceLeft', true);
+		objectPlayAnimation('adamCrewmateLegs', 'danceLeft', true);
+		objectPlayAnimation('adamCrewmateLegsPlayer', 'danceLeft', true);
+	elseif (beat + 1) % 2 == 0 then
+		objectPlayAnimation('kristenLegs', 'danceRight', true);
+		objectPlayAnimation('kristenLegsPlayer', 'danceRight', true);
+		objectPlayAnimation('adamLegs', 'danceRight', true);
+		objectPlayAnimation('adamLegsPlayer', 'danceRight', true);
+		objectPlayAnimation('chaseImpostorLegs', 'danceRight', true);
+		objectPlayAnimation('chaseImpostorLegsPlayer', 'danceRight', true);
+		objectPlayAnimation('adamCrewmateLegs', 'danceRight', true);
+		objectPlayAnimation('adamCrewmateLegsPlayer', 'danceRight', true);
+	end
+	objectPlayAnimation('adamStuckLegs', 'idle', true);
+	objectPlayAnimation('adamStuckLegsPlayer', 'idle', true);
 end
 
 function makeLegs()
 	--debugPrint(dadName);
+	--debugPrint(boyfriendName);
 	removeLuaSprite('kristenLegs', false);
 	removeLuaSprite('kristenLegsPlayer', false);
 	removeLuaSprite('adamLegs', false);
 	removeLuaSprite('adamLegsPlayer', false);
 	removeLuaSprite('adamStuckLegs', false);
 	removeLuaSprite('adamStuckLegsPlayer', false);
+	removeLuaSprite('chaseImpostorLegs', false);
+	removeLuaSprite('chaseImpostorLegsPlayer', false);
+	removeLuaSprite('adamCrewmateLegs', false);
+	removeLuaSprite('adamCrewmateLegsPlayer', false);
 
 	if (dadName == 'kristenRun') then
 		makeAnimatedLuaSprite('kristenLegs', 'characters/kristenLegs', getProperty('dad.x'), getProperty('dad.y'));
@@ -233,10 +340,139 @@ function makeLegs()
 		--debugPrint('a');
 	end
 
+	if (dadName == 'chaseImpostorRun' or dadName == 'chaseImpostorRunSimilarities') then
+		makeAnimatedLuaSprite('chaseImpostorLegs', 'characters/chaseImpostorLegs', getProperty('dad.x'), getProperty('dad.y'));
+		makeAnimatedLuaSprite('chaseImpostorShush', 'characters/chaseImpostorRunShush', getProperty('dad.x'), getProperty('dad.y'));
+
+		addAnimationByPrefix('chaseImpostorLegs', 'danceLeft', 'Dance Left', 24, false);
+		addAnimationByPrefix('chaseImpostorLegs', 'danceRight', 'Dance Right', 24, false);
+		addAnimationByPrefix('chaseImpostorShush', 'idle', 'Idle', 24, false);
+		addAnimationByPrefix('chaseImpostorShush', 'singRIGHT', 'Sing Right', 24, false);
+
+		setProperty('chaseImpostorLegs.scale.x', 3);
+		setProperty('chaseImpostorLegs.scale.y', 3);
+		setProperty('chaseImpostorShush.scale.x', 3);
+		setProperty('chaseImpostorShush.scale.y', 3);
+		--updateHitbox('chaseImpostorLegs');
+
+		--setProperty('chaseImpostorLegs.offset.x', -30);
+		--setProperty('chaseImpostorLegs.offset.y', -372);
+
+		setProperty('chaseImpostorLegs.flipX', getProperty('dad.flipX'));
+		setProperty('chaseImpostorShush.flipX', getProperty('dad.flipX'));
+
+		setProperty('chaseImpostorLegs.antialiasing', false);
+		setProperty('chaseImpostorShush.antialiasing', false);
+
+		setObjectOrder('chaseImpostorLegs', getObjectOrder('dadGroup') + 1);
+		setObjectOrder('chaseImpostorShush', getObjectOrder('dadGroup') + 2);
+
+		addLuaSprite('chaseImpostorLegs', true);
+		addLuaSprite('chaseImpostorShush', true); 
+
+		--setBlendMode('chaseImpostorLegs', 'add');
+		--debugPrint(getObjectOrder('chaseImpostorLegs'), 'test');
+		--debugPrint('a');
+	end
+
+	if (boyfriendName == 'chaseImpostorRun' or boyfriendName == 'chaseImpostorRunSimilarities') then
+		makeAnimatedLuaSprite('chaseImpostorLegsPlayer', 'characters/chaseImpostorLegs', getProperty('boyfriend.x'), getProperty('boyfriend.y'));
+		makeAnimatedLuaSprite('chaseImpostorShushPlayer', 'characters/chaseImpostorRunShush', getProperty('dad.x'), getProperty('dad.y'));
+
+		addAnimationByPrefix('chaseImpostorLegsPlayer', 'danceLeft', 'Dance Left', 24, false);
+		addAnimationByPrefix('chaseImpostorLegsPlayer', 'danceRight', 'Dance Right', 24, false);
+		addAnimationByPrefix('chaseImpostorShushPlayer', 'idle', 'Idle', 24, false);
+		addAnimationByPrefix('chaseImpostorShushPlayer', 'singRIGHT', 'Sing Right', 24, false);
+
+		setProperty('chaseImpostorLegsPlayer.scale.x', 3);
+		setProperty('chaseImpostorLegsPlayer.scale.y', 3);
+		setProperty('chaseImpostorShushPlayer.scale.x', 3);
+		setProperty('chaseImpostorShushPlayer.scale.y', 3);
+		--updateHitbox('chaseImpostorLegsPlayer');
+
+		--setProperty('chaseImpostorLegsPlayer.offset.x', -30);
+		--setProperty('chaseImpostorLegsPlayer.offset.y', -372);
+
+		setProperty('chaseImpostorLegsPlayer.flipX', getProperty('boyfriend.flipX'));
+		setProperty('chaseImpostorShushPlayer.flipX', getProperty('boyfriend.flipX'));
+
+		setProperty('chaseImpostorLegsPlayer.antialiasing', false);
+		setProperty('chaseImpostorShushPlayer.antialiasing', false);
+
+		setObjectOrder('chaseImpostorLegsPlayer', getObjectOrder('boyfriendGroup') + 1);
+		setObjectOrder('chaseImpostorShushPlayer', getObjectOrder('boyfriendGroup') + 2);
+
+		addLuaSprite('chaseImpostorLegsPlayer', true);
+		addLuaSprite('chaseImpostorShushPlayer', true);
+
+		--setBlendMode('chaseImpostorLegsPlayer', 'add');
+		--debugPrint(getObjectOrder('chaseImpostorLegsPlayer'), 'test');
+		--debugPrint('a');
+	end
+
+	if (dadName == 'adamCrewmateRun' or dadName == 'adamCrewmateRunSimilarities') then
+		makeAnimatedLuaSprite('adamCrewmateLegs', 'characters/adamCrewmateLegs', getProperty('dad.x'), getProperty('dad.y'));
+
+		addAnimationByPrefix('adamCrewmateLegs', 'danceRight', 'Dance Left', 24, false);
+		addAnimationByPrefix('adamCrewmateLegs', 'danceLeft', 'Dance Right', 24, false);
+
+		setProperty('adamCrewmateLegs.scale.x', 3);
+		setProperty('adamCrewmateLegs.scale.y', 3);
+		--updateHitbox('adamCrewmateLegs');
+
+		--setProperty('adamCrewmateLegs.offset.x', -30);
+		--setProperty('adamCrewmateLegs.offset.y', -372);
+
+		setProperty('adamCrewmateLegs.flipX', getProperty('dad.flipX'));
+
+		setProperty('adamCrewmateLegs.antialiasing', false);
+
+		setObjectOrder('adamCrewmateLegs', getObjectOrder('dadGroup') + 1);
+
+		addLuaSprite('adamCrewmateLegs', true);
+
+		--setBlendMode('adamCrewmateLegs', 'add');
+		--debugPrint(getObjectOrder('adamCrewmateLegs'), 'test');
+		--debugPrint('a');
+	end
+
+	if (boyfriendName == 'adamCrewmateRun' or boyfriendName == 'adamCrewmateRunSimilarities') then
+		makeAnimatedLuaSprite('adamCrewmateLegsPlayer', 'characters/adamCrewmateLegs', getProperty('boyfriend.x'), getProperty('boyfriend.y'));
+
+		addAnimationByPrefix('adamCrewmateLegsPlayer', 'danceRight', 'Dance Left', 24, false);
+		addAnimationByPrefix('adamCrewmateLegsPlayer', 'danceLeft', 'Dance Right', 24, false);
+
+		setProperty('adamCrewmateLegsPlayer.scale.x', 3);
+		setProperty('adamCrewmateLegsPlayer.scale.y', 3);
+		--updateHitbox('adamCrewmateLegsPlayer');
+
+		--setProperty('adamCrewmateLegsPlayer.offset.x', -30);
+		--setProperty('adamCrewmateLegsPlayer.offset.y', -372);
+
+		setProperty('adamCrewmateLegsPlayer.flipX', getProperty('boyfriend.flipX'));
+
+		setProperty('adamCrewmateLegsPlayer.antialiasing', false);
+
+		setObjectOrder('adamCrewmateLegsPlayer', getObjectOrder('boyfriendGroup') + 1);
+
+		addLuaSprite('adamCrewmateLegsPlayer', true);
+
+		--setBlendMode('adamCrewmateLegsPlayer', 'add');
+		--debugPrint(getObjectOrder('adamCrewmateLegsPlayer'), 'test');
+		--debugPrint('a');
+		--runEvent('Camera Follow Pos', getProperty('adamCrewmateLegsPlayer'));
+	end
+
 	objectPlayAnimation('kristenLegs', 'danceLeft');
 	objectPlayAnimation('kristenLegsPlayer', 'danceLeft');
 	objectPlayAnimation('adamLegs', 'danceLeft');
 	objectPlayAnimation('adamLegsPlayer', 'danceLeft');
 	objectPlayAnimation('adamStuckLegs', 'idle');
 	objectPlayAnimation('adamStuckLegsPlayer', 'idle');
+	objectPlayAnimation('chaseImpostorLegs', 'danceLeft');
+	objectPlayAnimation('chaseImpostorShush', 'idle');
+	objectPlayAnimation('chaseImpostorLegsPlayer', 'danceLeft');
+	objectPlayAnimation('chaseImpostorShushPlayer', 'idle');
+	objectPlayAnimation('adamCrewmateLegs', 'danceLeft');
+	objectPlayAnimation('adamCrewmateLegsPlayer', 'danceLeft');
 end

@@ -1,14 +1,16 @@
 {
 	"storyName": "Arcade Blitz",
+	"difficulties": "Easy, Normal, Hard, Unfair",
 	"hideFreeplay": false,
 	"weekBackground": "arcadeBlitzNutshell",
+	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"weekBefore": "tutorial",
 	"startUnlocked": true,
+	"hideStoryMode": false,
 	"weekCharacters": [
 		"kristenNutshell",
 		"adamNutshell",
@@ -43,7 +45,6 @@
 			]
 		]
 	],
-	"hideStoryMode": false,
-	"hiddenUntilUnlocked": false,
-	"weekName": "Arcade Blitz"
+	"weekName": "Arcade Blitz",
+	"hiddenUntilUnlocked": false
 }
