@@ -2,6 +2,70 @@
 	"dialogue": [
 		{
 			"expression": "talk",
+			"text": "Adiel says goodbye to Sett and heads out to find a dozen wyverberries for his potion.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "narrator"
+		},
+		{
+			"expression": "talk",
+			"text": "They seem to have all gone missing, though.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "narrator"
+		},
+		{
+			"expression": "talk",
+			"text": "He soon finds an injured wolf.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "narrator"
+		},
+		{
+			"expression": "talk",
+			"text": "Adiel wraps a bandage around the wolf's leg, and then the wolf runs off.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "narrator"
+		},
+		{
+			"expression": "talk",
+			"text": "However, the wolf comes back with a mouthful of wyverberries.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "narrator"
+		},
+		{
+			"expression": "talk",
+			"text": "It seems this wolf has been gathering them to feel better because of their magical healing properties.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "narrator"
+		},
+		{
+			"expression": "talk",
+			"text": "The wolf follows Adiel home, who binds the wolf to him as his familiar.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "narrator"
+		},
+		{
+			"expression": "talk",
+			"text": "Then, they get in bed for a good night's rest.",
+			"boxState": "normal",
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "narrator"
+		},
+		{
+			"expression": "talk",
 			"text": "Episode: Good Morning",
 			"boxState": "normal",
 			"sound": "",

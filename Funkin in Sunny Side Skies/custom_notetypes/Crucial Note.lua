@@ -12,6 +12,10 @@ function onCreate()
 			if getPropertyFromGroup('unspawnNotes', i, 'mustPress') then
 				setPropertyFromGroup('unspawnNotes', i, 'ignoreNote', false);
 			end
+			
+			setPropertyFromGroup('unspawnNotes', i, 'noteSplashHue', 1);
+			setPropertyFromGroup('unspawnNotes', i, 'noteSplashSat', 0);
+			setPropertyFromGroup('unspawnNotes', i, 'noteSplashBrt', 1);
 		end
 	end
 end

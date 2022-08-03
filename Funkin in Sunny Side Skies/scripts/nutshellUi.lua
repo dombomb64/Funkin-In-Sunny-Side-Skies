@@ -151,7 +151,7 @@ function popUpScore()
 	setProperty(comboSpriteName .. '.x', getProperty(comboSpriteName .. '.x') + getPropertyFromClass('ClientPrefs', 'comboOffset[0]'));
 	setProperty(comboSpriteName .. '.y', getProperty(comboSpriteName .. '.y') - getPropertyFromClass('ClientPrefs', 'comboOffset[1]') + 60);
 	if not hideHud and showCombo then
-		addLuaSprite(comboSpriteName, true);
+		addLuaSprite(comboSpriteName, false);
 	end
 
 	--local comboSpriteScale = math.floor(getProperty(comboSpriteName .. '.width') * 0.7);
@@ -185,7 +185,7 @@ function popUpScore()
 		setProperty(numSpriteName .. '.velocity.y', -getRandomInt(140, 160));
 		setProperty(numSpriteName .. '.velocity.x', getRandomInt(-5, 5));
 		if not hideHud and showComboNum then
-			addLuaSprite(numSpriteName, true);
+			addLuaSprite(numSpriteName, false);
 		end
 		runTimer(i .. 'comboNumFade' .. comboIdCounter, crochet * 0.002, 1);
 		--doTweenAlpha(i .. 'comboNumFade' .. comboIdCounter, numSpriteName, 0, 0.2, 'linear');
